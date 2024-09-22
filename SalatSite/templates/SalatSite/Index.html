@@ -1,0 +1,60 @@
+{% extends 'SalatSite/layout.html'%}
+{% load static %}
+
+{%block contentBody%}
+<!DOCTYPE html>
+<div class="Aside collapsed"> <!-- Добавил класс collapsed для свернутого меню -->
+    <button id="toggleAside">≡</button>
+    <img id="Logo" src="{%static 'SalatSite/images/logo.png'%}" alt="ошибка">
+    <div id="navigation">
+        <h2>Навигация:</h2>
+    </div>
+    <ul class="InfoAside">
+        <a href="{%url 'home'%}"><li>Главная</li></a>
+        <a href="{%url 'news'%}"><li>Новости</li></a>
+        <li>Попасть к нам</li>
+        <li>Состав</li>
+        <li>О нас</li>
+    </ul>
+</div>
+
+<div id="Header">
+    <div class="parallax"></div> <!-- Для параллакса -->
+    <h1>S@LAT ROOM</h1>
+</div>
+
+<div class="MainContent">
+    <section class="AboutUsSection">
+        <h2>О нас</h2>
+        <p>S@LAT ROOM — это команда киберкотлет, которые любят тратить свою жизнь, время и деньги на всякую виртуальную дичь.</p>
+    </section>
+
+    <section class="ProjectsSection">
+        <h2>Наши игры</h2>
+        <p>Здесь нужно написать, что мы конченные задроты, которые не хотят заниматься чем-то полезным в этой короткой жизни.</p>
+    </section>
+
+    <section class="TeamSection">
+        <h2>Наша команда</h2>
+        <div class="TeamMembers">
+            <div class="MemberCard">
+                <img src="https://www.litres.ru/pub/c/cover/67833976.jpg" alt="Илья">
+                <h3>Илья (Салат)</h3>
+                <p>Основатель и главный долбоеб.</p>
+            </div>
+            <div class="MemberCard">
+                <img src="https://i.pinimg.com/originals/e1/fc/8d/e1fc8de816c50866ba1e54f6fbd3f7ef.jpg" alt="Дима">
+                <h3>Дима (Палик)</h3>
+                <p>Какой-то хер с горы.</p>
+            </div>
+        </div>
+    </section>
+</div>
+
+<script>
+document.getElementById('toggleAside').addEventListener('click', function() {
+    const aside = document.querySelector('.Aside');
+    aside.classList.toggle('collapsed');
+});
+</script>
+{%endblock%}
