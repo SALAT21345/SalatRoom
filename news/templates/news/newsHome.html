@@ -1,0 +1,33 @@
+{% extends 'SalatSite/layout.html'%}
+{% load static %}
+
+{%block contentBody%}
+<!DOCTYPE html>
+<div class="Aside collapsed"> <!-- Добавил класс collapsed для свернутого меню -->
+    <button id="toggleAside">≡</button>
+    <img id="Logo" src="{%static 'SalatSite/images/logo.png'%}" alt="ошибка">
+    <div id="navigation">
+        <h2>Навигация:</h2>
+    </div>
+    <ul class="InfoAside">
+        <a href="{%url 'home'%}"><li>Главная</li></a>
+        <a href="{%url 'newsHome'%}"><li>Новости</li></a>
+        <li>Попасть к нам</li>
+        <li>Состав</li>
+        <li>О нас</li>
+    </ul>
+</div>
+
+<div id="Header">
+    <div class="parallax"></div> <!-- Для параллакса -->
+    <h1>S@LAT ROOM</h1>
+</div>
+
+
+<script>
+document.getElementById('toggleAside').addEventListener('click', function() {
+    const aside = document.querySelector('.Aside');
+    aside.classList.toggle('collapsed');
+});
+</script>
+{%endblock%}
