@@ -159,10 +159,17 @@ h1, h2, h3 {
 
 /* Команда */
 .TeamMembers {
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
     display: flex;
     gap: 20px;
 }
-
+.TeamMembers::-webkit-scrollbar-thumb {
+  background-color: blue;    /* цвет плашки */
+  border-radius: 20px;       /* закругления плашки */
+  border: 3px solid orange;
+}
 .MemberCard {
     background-color: #333;
     padding: 10px;
@@ -184,4 +191,9 @@ h1, h2, h3 {
     #Header {
         height: 350px;
     }
+}
+.DsMembers
+{
+    background-color: #2e2e2e;
+    padding: 10px;
 }

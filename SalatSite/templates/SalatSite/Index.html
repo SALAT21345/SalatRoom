@@ -3,6 +3,7 @@
 
 {%block contentBody%}
 <!DOCTYPE html>
+<div style="position: absolute; width: 100%; height: 100%; background: transparent; z-index: 10;" id="overlay"></div>
 <div class="Aside collapsed"> <!-- Добавил класс collapsed для свернутого меню -->
     <button id="toggleAside">≡</button>
     <img id="Logo" src="{%static 'SalatSite/images/logo.png'%}" alt="ошибка">
@@ -33,37 +34,42 @@
         <h2>Наши игры</h2>
         <p>Список игр в которых мы существуем: Counter-Strike2, Valorant, Minecraft, GTA V.</p>
     </section>
-
+    <div id="allMembers">
+        {%for listMembers in listMembers%}
+        <div class="DsMembers">Имя: {{listMembers.name}}</div>
+        {%endfor%}
+    </div>
     <section class="TeamSection">
         <h2>Наш основной состав</h2>
         <div class="TeamMembers">
             <div class="MemberCard">
-                <img src="{%static 'Images/Tomato.jpg'%}" alt="Илья">
+                <img src="{%static 'SalatSite/images/Tomato.jpg'%}" alt="Илья">
                 <h3>Илья (Салат)</h3>
-                <p>Основатель данной команды</p>
+                <p>Основатель данной команды. Программист.</p>
             </div>
 
              <div class="MemberCard">
-                <img src="https://img.freepik.com/premium-vector/cool-banana-sun-glasses-cartoon_382438-512.jpg" alt="">
+                <img src="{% static 'SalatSite/images/banana (1).png'%}" alt="">
                 <h3> Антон </h3>
-                <p>Зам. Главы</p>
+                <p>Зам.Главы. Дизайнер, звукорежиссёр.</p>
             </div>
 
              <div class="MemberCard">
-                <img src="https://yt3.googleusercontent.com/mbSFGMYxuZ7fTiaPWWYAtER8VH_mj3k3-LaS10mA86j0zsH_iteFsT6f7aw1qd3JO90BmnWqGA=s900-c-k-c0x00ffffff-no-rj" alt="">
+                <img src="{%static 'SalatSite/images/изображение_2024-09-23_210100495.png'%}" alt="">
                 <h3>Костя</h3>
-                <p>Мл.Админ</p>
+                <p>Мл.Админ. Смотрящий за Дискорд каналом. Твич стример</p>
             </div>
 
              <div class="MemberCard">
-                <img src="" alt="">
-                <h3> </h3>
-                <p> </p>
+                <img src="{%static 'SalatSite/images/изображение_2024-09-23_225955566.png'%}" alt="">
+                <h3>Дима</h3>
+                <p>Мл.Админ. Смотрящий за дискорд каналом. Пиар-менеджер</p>
             </div>
 
         </div>
     </section>
 </div>
+
 
 <script>
 document.getElementById('toggleAside').addEventListener('click', function() {
@@ -71,4 +77,5 @@ document.getElementById('toggleAside').addEventListener('click', function() {
     aside.classList.toggle('collapsed');
 });
 </script>
+
 {%endblock%}

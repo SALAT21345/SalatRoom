@@ -1,0 +1,190 @@
+body{
+    background-color: #1e1e1e;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Шрифты */
+h1, h2, h3 {
+    font-family: 'Montserrat', sans-serif;
+}
+
+#toggleAside, .InfoAside li {
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Основные стили для боковой панели */
+.Aside {
+    background-color: #2b2b2b;
+    border-right: 4px solid #333;
+    width: 250px;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    transition: transform 0.3s ease;
+    z-index: 100;
+}
+
+.Aside.collapsed {
+    transform: translateX(-250px);
+}
+
+#toggleAside {
+    position: absolute;
+    top: 20px;
+    right: -70px;
+    background-color: #444;
+    border: none;
+    color: #fff;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 1.5rem;
+    z-index: 101;
+    width: 50px;
+    border-radius:7px;
+}
+
+#navigation h2{
+    color: white;
+    padding: 15px;
+}
+
+#toggleAside:hover {
+    background-color: #555;
+}
+
+#Logo {
+    display: block;
+    margin: 20px auto;
+    width: 80%;
+    border-radius: 15px;
+    animation: glow 2s infinite;
+}
+
+@keyframes glow {
+    0%, 100% {
+        box-shadow: 0 0 20px rgba(255, 0, 0, 0.2);
+    }
+    50% {
+        box-shadow: 0 0 40px rgba(255, 0, 0, 0.7);
+    }
+}
+
+.InfoAside {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+.InfoAside li {
+    background-color: #333;
+    margin: 10px;
+    padding: 15px;
+    border-radius: 5px;
+    color: #fff;
+    text-align: left;
+    transition: background-color 0.3s ease;
+}
+
+.InfoAside li:hover {
+    background-color: #555;
+    cursor: pointer;
+}
+
+.InfoAside li a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* Параллакс-эффект для шапки */
+#Header {
+    position: relative;
+    width: 100%;
+    height: 700px;
+    overflow: hidden;
+    border-bottom: 2px solid #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.parallax {
+    background-image: url("../images/headerIMG.png");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+#Header h1 {
+    color: transparent;
+    background-image: linear-gradient(to right, red, fuchsia);
+    -webkit-background-clip: text;
+    background-clip: text;
+    font-size: calc(4vw + 30px);
+    text-align: center;
+    z-index: 10;
+    text-shadow:
+                6px 6px 0 #ffffff,
+                6px 6px 0 #ffffff,
+                6px 6px 0 #ffffff,
+                6px 6px 0 #ffffff;
+}
+
+/* Основные стили */
+.MainContent {
+    width: 60%;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #1e1e1e;
+    color: #f5f5f5;
+}
+
+.AboutUsSection, .ProjectsSection, .TeamSection {
+    background-color: #2e2e2e;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+.AboutUsSection h2, .ProjectsSection h2, .TeamSection h2 {
+    color: #d22dff;
+    margin-bottom: 10px;
+}
+
+/* Команда */
+.TeamMembers {
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+    display: flex;
+    gap: 20px;
+}
+
+.MemberCard {
+    background-color: #333;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.MemberCard img {
+    width: 200px;
+    border-radius: 10%;
+    margin-bottom: 10px;
+}
+
+.MemberCard h3 {
+    color: #ff6;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+    #Header {
+        height: 350px;
+    }
+}
