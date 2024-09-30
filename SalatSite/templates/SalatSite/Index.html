@@ -13,8 +13,8 @@
     <ul class="InfoAside">
         <a href="{%url 'home'%}"><li>Главная</li></a>
         <a href="{%url 'newsHome'%}"><li>Новости</li></a>
-        <li>Попасть к нам</li>
-        <li>Состав</li>
+        <a href="{%url 'inv'%}"><li>Попасть к нам</li></a>
+        <a href="{%url 'members'%}"><li>Наш Состав</li></a>
         <li>О нас</li>
     </ul>
 </div>
@@ -35,9 +35,9 @@
         <p>Список игр в которых мы существуем: Counter-Strike2, Valorant, Minecraft, GTA V.</p>
     </section>
     <div id="allMembers">
-        {%for listMembers in listMembers%}
-        <div class="DsMembers">Имя: {{listMembers.name}}</div>
-        {%endfor%}
+        {% for listMembers in listMembers %}
+        <div class="DsMembers member-item">Имя: {{ listMembers.name }}</div>
+        {% endfor %}
     </div>
     <section class="TeamSection">
         <h2>Наш основной состав</h2>

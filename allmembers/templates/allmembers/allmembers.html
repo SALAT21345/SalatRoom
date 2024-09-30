@@ -1,6 +1,5 @@
-{% extends 'SalatSite/layout.html'%}
-{% load static %}
-
+{%extends 'allmembers/layout.html' %}
+{%load static%}
 {%block contentBody%}
 <!DOCTYPE html>
 <div class="Aside collapsed"> <!-- Добавил класс collapsed для свернутого меню -->
@@ -21,6 +20,15 @@
 <div id="Header">
     <div class="parallax"></div> <!-- Для параллакса -->
     <h1>S@LAT ROOM</h1>
+</div>
+<div id="AllmembersContent">
+    <div id="allMembers">
+        <div class="Member">
+            <h1 class="Name">Илья</h1>
+            <img class="Avatar" src="{%static 'SalatSite/images/Tomato.jpg'%}" alt="">
+            <h3 class="infoMembers">Илья - Основатель этой команды. Занимается развитием команды, разработкой сайта, телеграм ботов и вообще всем чем можно.</h3>
+        </div>
+    </div>
 </div>
 
 <script>

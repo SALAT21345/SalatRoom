@@ -12,7 +12,10 @@ h1, h2, h3 {
 #toggleAside, .InfoAside li {
     font-family: 'Poppins', sans-serif;
 }
-
+.InfoAside a
+{
+    text-decoration: none;
+}
 /* Основные стили для боковой панели */
 .Aside {
     background-color: #2b2b2b;
@@ -192,8 +195,9 @@ h1, h2, h3 {
         height: 350px;
     }
 }
-.DsMembers
-{
-    background-color: #2e2e2e;
-    padding: 10px;
+.member-item {
+    background-color: #2c2c2c; /* фон */
+    border-radius: 10px; /* радиус углов */
+    padding: 10px; /* отступы */
+    margin-bottom: 10px; /* отступ между элементами */
 }

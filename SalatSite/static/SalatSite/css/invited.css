@@ -11,7 +11,6 @@ h1, h2, h3 {
 
 #toggleAside, .InfoAside li {
     font-family: 'Poppins', sans-serif;
-    
 }
 .InfoAside a
 {
@@ -139,8 +138,55 @@ h1, h2, h3 {
                 6px 6px 0 #ffffff,
                 6px 6px 0 #ffffff;
 }
+#rules
+{
+    width: 95%;
+    height: 2000px;
+    position: relative;
+    padding-top: 5px;
+    padding-left: 5px;
+    left: 38px;
+    background-color: #2d2d2d;
+    border-radius: 10px;
+}
+#rules h1
+{
+    color:#b800c5;
+    padding-left: 8px;
 
-
+    text-align: center;
+    
+}
+#rules li
+{
+    color:#ffffff;
+    padding-bottom: 10px;
+}
+#rules h3{
+    position: relative;
+    left: -35px;
+    color: #dedede;
+}
+#rules hr
+{
+    position: relative;
+    left: -25px;
+    border-color: black;
+}
+.HeaderRules
+{
+    position: relative;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 100%;
+    color: #ffffff;
+}
+.blockH3
+{
+    font-size: 24px;
+    color: #d22dff; 
+}
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
     #Header {
         height: 350px;

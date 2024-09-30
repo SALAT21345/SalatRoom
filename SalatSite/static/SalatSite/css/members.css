@@ -146,3 +146,49 @@ h1, h2, h3 {
         height: 350px;
     }
 }
+
+.member-item
+{
+    text-align: center;
+    position: relative;
+    
+    width: 200px;
+    padding-bottom: 10px;
+    background-color: #444;
+    border-radius: 10px;
+    margin: 10px;
+    margin-left: 40%;
+}
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+    #Header {
+        height: 350px;
+    }
+}
+.textinAllMembers
+{
+    position: relative;
+    top: 5px;
+}
+.Member
+{
+    background-color: #2d2d2d;
+    border-radius: 30px;
+    width: 30%;
+    height: 400px;
+    position: relative;
+    left: 34px;
+    float: left;
+}
+#allMembers
+{
+    padding-top: 15px;
+}
+.Member h1
+{
+    color:#b800c5;
+    text-align: center;
+}
+.infoMembers
+{
+    text-align: center;
+}
