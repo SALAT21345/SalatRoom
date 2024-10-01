@@ -5,6 +5,7 @@ from aiogram.filters import CommandStart, Command
 import keyboard as kb
 from aiogram.fsm.state import StatesGroup, State
 from aiogram.fsm.context import FSMContext
+from aiogram.types.web_app_info import WebAppInfo
 adminid = '1243576393'
 class Reg(StatesGroup):
     Steam_Link = State()
@@ -25,12 +26,19 @@ async def cmd_start(message: Message):
 async def Site(message: Message):
     await message.answer("Конечно, вот наш сайт!", reply_markup=kb.urls)
 
+
+@dp.message(Command('/Game'))
+async def game(message:Message):
+    await message.answer("Кликай, что бы открыть!", web_app=WebAppInfo(url=) )
+
 @dp.message(Command('Регистрация'))
 async def Site(message: Message, state: FSMContext):
     await state.set_state(Reg.Steam_Link)
     await message.answer("Вы выбрали 'Регистрация'. Перед подачей заявки на вступление в команду отправьте, пожалуйста, ссылку на ваш Стим аккаунт.")
 
-
+@dp.message(Command('/Game'))
+async def game(message:Message):
+    await message.answer("Кликай, что бы открыть!" )
 
 @dp.message(Reg.Steam_Link)
 async def SaveLink(message: Message, state: FSMContext):

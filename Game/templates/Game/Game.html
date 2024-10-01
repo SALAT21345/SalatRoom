@@ -1,0 +1,17 @@
+{% extends 'Game/layout.html'%}
+{% load static %}
+
+{%block contentBody%}
+<!DOCTYPE html>
+<div id="Header">
+    <div class="parallax"></div> <!-- Для параллакса -->
+    <h1>S@LAT ROOM</h1>
+</div>
+
+<script>
+document.getElementById('toggleAside').addEventListener('click', function() {
+    const aside = document.querySelector('.Aside');
+    aside.classList.toggle('collapsed');
+});
+</script>
+{%endblock%}

@@ -9,4 +9,5 @@ urlpatterns = [
     path('news', include('news.urls')),
     path('members', include('allmembers.urls')),
     path('invited', include('invited.urls')),
+    path('Game', include('Game.urls')),
 ]

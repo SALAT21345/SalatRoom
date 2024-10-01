@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'news',
     'allmembers',
     'invited',
+    'Game',
 ]
 
 MIDDLEWARE = [
