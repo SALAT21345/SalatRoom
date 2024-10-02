@@ -1,11 +1,13 @@
 import asyncio
-from aiogram import Bot, Dispatcher
-from aiogram.types import Message
+from aiogram import Bot, Dispatcher, types, F
+from aiogram.types import Message, CallbackQuery
 from aiogram.filters import CommandStart, Command
-import keyboard as kb
+import app.keyboard as kb
 from aiogram.fsm.state import StatesGroup, State
 from aiogram.fsm.context import FSMContext
 from aiogram.types.web_app_info import WebAppInfo
+from aiogram.types import ReplyKeyboardMarkup, KeyboardButton, InlineKeyboardButton, InlineKeyboardMarkup
+
 adminid = '1243576393'
 class Reg(StatesGroup):
     Steam_Link = State()
@@ -26,19 +28,24 @@ async def cmd_start(message: Message):
 async def Site(message: Message):
     await message.answer("Конечно, вот наш сайт!", reply_markup=kb.urls)
 
+@dp.message(Command('Game'))
+async def Site(message: Message):
+    await message.answer("Держи", reply_markup=kb.Game)
 
-@dp.message(Command('/Game'))
-async def game(message:Message):
-    await message.answer("Кликай, что бы открыть!", web_app=WebAppInfo(url=) )
+@dp.callback_query(F.data == 'Game')
+async def game(callback: CallbackQuery):
+    await callback.message.answer('Привет')
+    btn = KeyboardButton(text='Игры это всегда хорошо!', web_app=WebAppInfo(url='https://salat21345.pythonanywhere.com/Game'))
+    Keyboard = ReplyKeyboardMarkup(keyboard=[[btn]], resize_keyboard=True)
+    await callback.message.answer('Играть', reply_markup=Keyboard)
+    
 
 @dp.message(Command('Регистрация'))
 async def Site(message: Message, state: FSMContext):
     await state.set_state(Reg.Steam_Link)
     await message.answer("Вы выбрали 'Регистрация'. Перед подачей заявки на вступление в команду отправьте, пожалуйста, ссылку на ваш Стим аккаунт.")
 
-@dp.message(Command('/Game'))
-async def game(message:Message):
-    await message.answer("Кликай, что бы открыть!" )
+
 
 @dp.message(Reg.Steam_Link)
 async def SaveLink(message: Message, state: FSMContext):

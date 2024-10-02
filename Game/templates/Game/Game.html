@@ -7,6 +7,25 @@
     <div class="parallax"></div> <!-- Для параллакса -->
     <h1>S@LAT ROOM</h1>
 </div>
+<div id="content">
+    <div id="Money">
+        <button id="ButtonMoney" onclick="ClickOnMoney()"></button>
+        <h3 id="countText">Счётчик</h3>
+        <h3 id="count">0</h3>
+    </div>
+</div>
+
+
+<script>
+var count = 0;
+
+function ClickOnMoney() {
+    count++;
+    document.getElementById("count").innerHTML = count; 
+}
+
+</script>
+
 
 <script>
 document.getElementById('toggleAside').addEventListener('click', function() {

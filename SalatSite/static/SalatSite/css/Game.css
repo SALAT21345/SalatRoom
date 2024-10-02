@@ -52,3 +52,37 @@ h1, h2, h3 {
         height: 350px;
     }
 }
+
+#content
+{
+    align-items: center;
+}
+#content #ButtonMoney
+{
+    background: none;
+    border: none;
+    background-image: url("../images/pngwing.png");
+    background-size: cover;
+    position: relative;
+    width: 350px;
+    height: 350px;
+    top: 50px;
+    left: 28%;
+}
+
+#count
+{
+    padding-top: 5px;
+    float: left;
+    position: relative;
+    top: -19px;
+    left: 44.5%;
+}
+#countText
+{
+    padding-top: 5px;
+    float: left;
+    position: relative;
+    top: -20px;
+    left: 44%;
+}

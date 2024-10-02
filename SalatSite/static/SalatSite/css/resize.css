@@ -1,0 +1,62 @@
+
+@media (min-width: 1100px)
+{
+    #content #ButtonMoney
+    {
+        left: 29%;
+    }
+}
+@media (min-width: 1200px)
+{
+    #content #ButtonMoney
+    {
+        left: 30%;
+    }
+}
+@media (min-width: 1300px)
+{
+    #content #ButtonMoney
+    {
+        left: 32%;
+    }
+}
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+    #Header {
+        height: 350px;
+    }
+    #content #ButtonMoney
+    {
+        left: 25%;
+    }
+}
+@media (min-width: 480px)
+{
+    #Header h1
+    {
+        font-size: 100px;
+    }
+    #count
+    {
+
+        left: 48.5%;
+    }
+
+}
+@media (min-width: 320px)
+{
+    #Header h1
+    {
+        font-size: 100px;
+    }
+    #count
+        {
+
+            left: 48.5%;
+        }
+        #countText
+        {
+
+            left: 48%;
+        }
+}
+

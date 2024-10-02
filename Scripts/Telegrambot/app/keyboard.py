@@ -11,4 +11,10 @@ urls = InlineKeyboardMarkup(inline_keyboard=
 [
     [InlineKeyboardButton(text='Сайт', url='Salat21345.pythonanywhere.com')]
 ])
+Game = InlineKeyboardMarkup(
+    inline_keyboard=[
+        [InlineKeyboardButton(text='Играть',callback_data='Game')]
+    ],
+    resize_keyboard=True
+)
 
